@@ -1,0 +1,48 @@
+﻿//通用样式
+body{
+	background-color: #eeeeed;
+	color: #383a4c;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+	_height: 100%;
+}
+
+//通用类
+.clear{
+	clear: both;
+	_width: 0px;
+	_line-height: 0px;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.w100 {
+	width: 100%;
+}
+.clearfix:after{ display:block; content:''; clear:both;}
+.clearfix{ zoom:1;}
+
+//通用UI
+
+//图标、icon
+
+
+
+
+//文字、链接
+
+
+
+
+//按钮
+
+
+
+
+
+
+//表格、列表

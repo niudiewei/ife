@@ -1,0 +1,47 @@
+﻿.header-wrapper {
+	height: 56px;
+	background: #2189bf;
+	min-width: 1280px;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	.header {
+		width: 1280px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.header-logo {
+		float: left;
+		width: 36px;
+		height: 36px;
+		margin-top: 10px;
+		margin-left: 50px;
+		background: url(#{$img}logo.png) no-repeat;
+	}
+	.header-search input {
+		width: 272px;
+		height: 28px;
+		border-radius: 14px;
+		border: none;
+		outline: none;
+		float: right;
+		margin-top: 14px;
+		padding-left: 40px;
+		background: url(#{$img}search.png) no-repeat 17px center #fff;
+		line-height: 28px;
+	}
+	.header-login {
+		float: right;
+		padding-left: 20px;
+		color: #fff;
+		font-size: 12px;
+		background: url(#{$img}login.png) no-repeat;
+		margin-top: 20px;
+		margin-left: 20px;
+		a {
+			color: #fff;
+			font-size: 12px;
+		}
+	}
+}

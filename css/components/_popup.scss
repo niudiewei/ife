@@ -1,0 +1,108 @@
+﻿//弹出层样式
+/*popup-module*/
+div.jqifade{
+	background-color: #000;
+}
+div.jqi{
+	border-radius: 5px;
+	padding: 0;
+	border: none;
+	font: 14px/100% "微软雅黑","Microsoft YaHei",arial;
+	width: 500px;
+	background-color: #ffffff;
+	text-align: left;
+	.jqiclose {
+		font-size: 28px;
+		font-weight: normal;
+		color: #000;
+		border-left: 1px solid #dae6ee;
+		padding: 0;
+		height: 46px;
+		line-height: 40px;
+		width: 46px;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		_line-height: 48px;
+		overflow: hidden;
+		cursor: pointer;
+		z-index: 1000;
+		display: block;
+		float: right;
+		margin: 0 0 -35px;
+	}
+	.jqistates{
+		width: 100%;
+		float: none;
+	}
+	.jqititle {
+		color: #383a4b;
+		padding: 13px 0 13px 20px;
+		font-size: 18px;
+		border-color: #dae6ee;
+		line-height: 20px;
+	    border-bottom: solid 1px #eeeeee;
+	}
+	.jqimessage {
+		line-height: 20px;
+		color: #444444;
+		margin: 40px 20px 35px;
+	    padding: 0;
+	    text-align: center;
+	}
+	.w-btn {
+		background-color: #189cfb;
+		color: #fff;
+		border: 1px solid #0979ca;
+		display: inline-block;
+		padding: 13px 0;
+		text-decoration: none;
+		width: 166px;
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 2px;
+		&:hover, &.active{
+			background: #52b4fb;
+		}
+	}
+	.w-btn-small {
+		padding: 10px 0;
+		width: 118px;
+		font-size: 14px;
+		margin: 0 20px;
+	}
+	.cancel-btn{
+		background: #1abc9c;
+		border: 1px solid #08977b;
+		&:hover, &.active{
+			background: #32cbad;
+		}
+		&.press{
+			background: #00ab89;
+		}
+	}
+	.jqibuttons {
+		border: none;
+		background: none;
+		text-align: center;
+		padding: 20px 0 30px;
+	}
+	.jqidefaultbutton{
+		background-color: #189cfb;
+	    color: #fff;
+	    border: 1px solid #0979ca;
+	    display: inline-block;
+	    text-decoration: none;
+	    text-align: center;
+	    vertical-align: middle;
+	    border-radius: 2px;
+	    padding: 10px 0;
+	    width: 118px;
+	    font-size: 14px;
+	    cursor: pointer;
+	    &:hover{
+	    	background: #52b4fb;
+	    }
+	}
+}

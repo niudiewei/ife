@@ -1,0 +1,152 @@
+.sidebar-bg {
+    width: 1280px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -640px;
+    .bg-bar {
+        background: #2a2e3d;
+        width: 260px;
+        height: 100%;
+    }
+}
+.sidebar {
+    width: 260px;
+    float: left;
+    background: #2a2e3d;
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    position: relative;
+    left: 0;
+    top: 0;
+    .personal-center {
+        height: 132px;
+        padding-top: 18px;
+        padding-left: 45px;
+        background: #2b2e3d;
+    }
+    .personal-info {
+        margin-bottom: 20px;
+        height: 57px;
+    }
+    .personal-icon {
+        float: left;
+        width: 47px;
+        height: 47px;
+        border: 2px solid #bababe;
+        border-radius: 50%;
+        padding: 3px;
+        text-align: center;
+        position: relative;
+        left: 0;
+        top: 0;
+        .icon-bg {
+            width: 47px;
+            height: 47px;
+            background: #b9babd;
+            display: inline-block;
+            border-radius: 50%;
+            visibility: middle;
+        }
+        // img {
+        //     width: 47px;
+        //     height: 47px;
+        //     border-radius: 50%;
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     margin-left: -23.5px;
+        //     margin-top: -23.5px;
+        // }
+    }
+    .personal-name {
+        float: left;
+        color: #f6f5f5;
+        font-size: 12px;
+        padding-left: 18px;
+        line-height: 57px;
+    }
+    .personal-social {
+        height: 51px;
+        padding-top: 4px;
+        overflow: hidden;
+        .social-list {
+            padding: 0 18px;
+            float: left;
+            border-left: 2px solid #333647;
+            margin-left: -2px;
+            a {
+                display: block;
+                color: #67778b;
+                font-size: 12px;
+                text-align: center;
+                line-height: 15px;
+            }
+        }
+    }
+    .side-nav {
+        .nav-list {
+            .list-lv1 {
+                padding-left: 45px;
+                height: 45px;
+                font-size: 12px;
+                line-height: 45px;
+                > a {
+                    height: 45px;
+                    color: #6e8095;
+                    padding-left: 35px;
+                    display: block;
+                    background: url(#{$img}star.png) no-repeat left center;
+                }
+                &.on {
+                    height: auto;
+                    background: #383d4e;
+                    > a {
+                        color: #fff;
+                    }
+                }
+            }
+            .ul-lv2 {
+                padding-left: 22px;
+            }
+            .list-lv2 {
+                line-height: 12px;
+                padding-bottom: 12px;
+                color: #6e8095;
+                padding-left: 18px;
+                background: url(#{$img}arrowright.png) no-repeat left top;
+                > a {
+                    line-height: 12px;
+                    color: #6e8095;
+                    display: block;
+                    padding-left: 16px;
+                    background: url(#{$img}folder.png) no-repeat left center;
+                }
+                &.on {
+                    background: url(#{$img}arrowdown.png) no-repeat left top;
+                    margin: 6px 0;
+                    > a {
+                        color: #fff;
+                        background: url(#{$img}folder-light.png) no-repeat left center;
+                    }
+                }
+            }
+            .list-lv3 {
+                padding-top: 16px;
+                margin-left: 15px;
+                padding-left: 15px;
+                background: url(#{$img}doc.png) no-repeat left bottom;
+                > a {
+                    color: #6e8095;
+                }
+                &.on {
+                    background: url(#{$img}doc-light.png) no-repeat left bottom;
+                    > a {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
