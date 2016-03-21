@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Microsoft Yahei';
+    }
+    .box {
+        width: 500px;
+        height: 500px;
+        border: 2px solid #000;
+        margin: 50px auto;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .box ul {
+        overflow: hidden;
+        /*margin-top: -1px;
+        margin-left: -1px;*/
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .box ul > li {
+        width: 50px;
+        height: 50px;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        margin-right: -1px;
+        margin-bottom: -1px;
+        float: left;
+        font-size: 12px;
+    }
+    .count {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .count.row {
+        top: -50px;
+    }
+    .count.row li {
+        width: 50px;
+        margin-right: -1px;
+        float: left;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+    }
+    .count.col {
+        left: -50px;
+        line-height: 50px;
+        height: 50px;
+        width: 50px;
+        margin-bottom: -1px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .block {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: red;
+        box-sizing: border-box;
+        border-top: 10px solid blue;
+    }
+    .handle {
+        margin: 50px auto;
+        text-align: center;
+    }
+    </style>
+    <script>
+    'use strict';
+    function rnd(n,m){
+    	return parseInt(Math.random()*(m-n)+n);
+    }
+    window.onload = function(){
+        var oBox = document.getElementById('box');
+        var oUl = oBox.children[1];
+        var oTxt = document.getElementById('txt');
+        var oBtn = document.getElementById('btn');
+        var c = 10;
+        var r = 10;
+        var w = 50,h = 50;
+        var left = 0;
+        var top = 0;
+        var rotate = 0;
+        for(var i=0;i<c*r;i++){
+            var oLi = document.createElement('li');
+            oUl.appendChild(oLi);
+            // oLi.innerHTML = oLi.offsetLeft+', '+oLi.offsetTop;
+        }
+        // 画小方块
+        var oBlock = document.createElement('span');
+        oBox.appendChild(oBlock);
+        oBlock.className = 'block';
+        left = rnd(0,r)*w;
+        top = rnd(0,c)*h;
+        oBlock.style.left = left+'px';
+        oBlock.style.top = top+'px';
+
+        //操作
+        oBtn.onclick = function(){
+            var sValue = oTxt.value;
+            switch(sValue){
+                case 'GO':
+                    go();
+                    break;
+                case 'TUN LEF':
+                    rotate -= 90;
+                    break;
+                case 'TUN RIG':
+                    rotate += 90;
+                    break;
+                case 'TUN BAC':
+                    rotate -= 180;
+                    break;
+            }
+            oBlock.style.WebkitTransform = 'rotate('+rotate+'deg)';
+        };
+
+
+        function go(){
+            var dir = (rotate/90)%4;
+            if(dir == -3)dir = 1;
+            if(dir == -2)dir = 2;
+            if(dir == -1)dir = 3;
+            switch(dir){
+                case 0:
+                    top -= 50;
+                    break;
+                case 1:
+                    left += 50;
+                    break;
+                case 2:
+                    top += 50;
+                    break;
+                case 3:
+                    left -= 50;
+                    break;
+            }
+            if(top <= 0)top = 0;
+            if(top >= w*(c-1))top = w*(c-1);
+            if(left <= 0)left = 0;
+            if(left >= h*(r-1))left = w*(c-1);
+            oBlock.style.left = left+'px';
+            oBlock.style.top = top+'px';
+        }
+    };
+    </script>
+</head>
+<body>
+    <div id="box" class="box">
+        <ol class="count row">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ol>
+        <ul></ul>
+        <ol class="count col">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ol>
+    </div>
+    <div class="handle">
+        <input type="text" value="GO" class="txt" id="txt" />
+        <input type="button" value="START" id="btn" class="btn"/>
+    </div>
+</body>
+</html>
