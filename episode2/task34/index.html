@@ -166,24 +166,36 @@
 
             if(sValue.indexOf('MOV') != -1){
                 // 转弯并直行
-                var count = parseInt(rotate/90);
                 var dir = getDir(rotate);
                 //after work
                 switch(sValue){
                     case 'MOV LEF':
+                        if(dir == 0)rotate -= 90;
+                        if(dir == 2)rotate += 90;
+                        if(dir == 1)rotate += 180;
                         left -= w;
                         break;
                     case 'MOV TOP':
+                        if(dir == 1)rotate -= 90;
+                        if(dir == 2)rotate += 180;
+                        if(dir == 3)rotate += 90;
                         top -= h;
                         break;
                     case 'MOV RIG':
+                        if(dir == 0)rotate += 90;
+                        if(dir == 2)rotate -= 90;
+                        if(dir == 3)rotate += 180;
                         left += w;
                         break;
                     case 'MOV BOT':
+                        if(dir == 0)rotate+= 180;
+                        if(dir == 1)rotate += 90;
+                        if(dir == 3)rotate -= 90;
                         top += h;
                         break;
                 }
                 oBlock.style.WebkitTransform = 'rotate('+rotate+'deg)';
+                go();
             }
         };
 
