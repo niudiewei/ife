@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Microsoft Yahei';
+}
+.box {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #000;
+    margin: 50px auto;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.box ul {
+    overflow: hidden;
+    /*margin-top: -1px;
+    margin-left: -1px;*/
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.box ul > li {
+    width: 50px;
+    height: 50px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    float: left;
+    font-size: 12px;
+}
+.count {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.count.row {
+    top: -50px;
+}
+.count.row li {
+    width: 50px;
+    margin-right: -1px;
+    float: left;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+}
+.count.col {
+    left: -50px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    margin-bottom: -1px;
+    font-size: 18px;
+    text-align: center;
+}
+.block {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: red;
+    box-sizing: border-box;
+    border-top: 10px solid blue;
+    transition: 1s all ease;
+}
+.handle {
+    margin: 50px auto;
+    text-align: center;
+}
+textarea {
+    width: 410px;
+    height: 160px;
+    display: block;
+    margin: 0 auto;
+    resize: none;
+    background: #000;
+    color: rgb(29, 114, 33);
+    font-size: 18px;
+    outline: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 50px;
+    border: none;
+    line-height: 30px;
+    text-transform:uppercase;
+}
+.txtbox {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 460px;
+    height: 160px;
+    margin: 0 auto;
+}
+#container {
+    width: 30px;
+    float: left;
+    color: Gray;
+    font-family: Courier New;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    top: 0;
+}
+#divlines {
+    position: absolute;
+    width: 30px;
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ccc;
+    z-index: 10;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+}
+#divlines-bg {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ccc;
+    z-index: 10;
+}
